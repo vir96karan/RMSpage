@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="videos/background.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="header">
+        <div class="header-content">
+            <img src="images/rail.gif" alt="Logo 1" class="logo logo-left">
+            <img src="images/logo.png" alt="Logo 2" class="logo logo-right">
+        </div>
+        <div class="menu">
+            <ul>
+                <h1 class="header-title"><marquee behavior="scroll" direction="left" scrollamount="15">Welcome to Klovertel RMS for Indian Railways</marquee></h1>
+            </ul>
+        </div>
+    </div>
+
+    <div class="login-container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+<!--
+<div class="centered-image">
+    <img src="images/railcollage.bmp" alt="Collage">
+</div>
+    -->

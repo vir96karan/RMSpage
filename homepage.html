@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <img src="images/rail.gif" alt="Logo 1" class="logo logo-left">
+            <h1 class="header-title"><marquee behavior=scroll direction="left" scrollamount="15">Remote Monitoring System for Rolling Stock</marquee></h1>
+            <img src="images/logo.png" alt="Logo 2" class="logo logo-right">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li>
+
+                    <a href="status.html">Status</a>
+
+                </li>
+                <li><a href="map.html">MAP</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <a href="#">Real Time data</a>
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="hvc.html">High Voltage Circuit</a>
+                            <a href="tc.html">Traction Converter</a>
+                            <a href="tm.html">Traction Motor</a>
+                            <a href="auc.html">Auxiliary Converter</a>
+                            <a href="aumac.html">Auxiliary Machines</a>
+                            <a href="tb.html">Traction/Braking</a>
+                            <a href="tnv.html">Temperature and Ventilation</a>
+                            <a href="pp.html">Pneumatic Pressure</a>
+                            <a href="energy.html">Energy Consumption</a>
+                            <a href="ss.html">SubSystem status</a>
+                            <a href="minmax.html">Min Max</a>
+                            <a href="swf.html">Software version</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <a href="#">Historic Data</a>
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Recorded Data</a>
+                            <a href="#">Configurable Data</a>
+                            <a href="#">Loco Utilisation Data</a>
+                            <a href="#">Loco lifetime Data</a>
+                            <a href="#">Loco Pilot</a>
+                            <a href="#">Graphs</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">DDS</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <a href="#">Register</a>
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Loco registration</a>
+                            <a href="#">User registration</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html" id="logoutLink">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-box" placeholder="Search by Loco Number, Type, etc...">
+        <button class="search-button" onclick="searchTable()">Search</button>
+    </div>
+
+
+    <div class="container">
+        <table id="vehicleData">
+            <thead>
+                <tr>
+                    <th>Loco Number</th>
+                    <th>Type</th>
+                    <th>Date and Time</th>
+                    <th>Pantograph</th>
+                    <th>VCB (kV)</th>
+                    <th>Speed (km/h) </th>
+                    <th>Traction converter (V)</th>
+                    <th>Catenary Voltage (kV)</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tbody>
+                <tr>
+                    <td>30210</td>
+                    <td>WAP</td>
+                    <td>20/08/24</td>
+                    <td>UP  </td>
+                    <td>25</td>
+                    <td>55</td>
+                    <td>6.5</td>
+                </tr>
+                <tr>
+                    <td>35165</td>
+                    <td>WAG</td>
+                    <td>19/08/24</td>
+                    <td>UP</td>
+                    <td>24.95</td>
+                    <td>10</td>
+                    <td>6</td>
+                    <td>25.001</td>
+                </tr>
+                <tr>
+                    <td>30255</td>
+                    <td>WAP</td>
+                    <td>20/8/24</td>
+                    <td>DOWN</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>5.9</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>30357</td>
+                    <td>WAP</td>
+                    <td>18/08/24</td>
+                    <td>UP</td>
+                    <td>24.97</td>
+                    <td>0</td>
+                    <td>6.1</td>
+                </tr>
+                <tr>
+                    <td>41058</td>
+                    <td>WAG</td>
+                    <td>20/08/24</td>
+                    <td>UP</td>
+                    <td>25.10</td>
+                    <td>18</td>
+                    <td>6.01</td>
+                    <td>25.00</td>
+                </tr>
+                <tr>
+                    <td>31393</td>
+                    <td>WAG</td>
+                    <td>16/08/24</td>
+                    <td>DOWN</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>--</td>
+                    
+                </tr>
+                <tr>
+                    <td>30504</td>
+                    <td>WAP</td>
+                    <td>21/08/24</td>
+                    <td>UP</td>
+                    <td>24.97</td>
+                    <td>5.68</td>
+                    <td>35</td>
+                    <td>25.121</td>
+                </tr>
+                <!-- More sample rows can be added here -->
+            </tbody>
+
+
+        </table>
+    </div>
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, j, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("vehicleData");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows (except the first, which contains table headers)
+            for (i = 1; i < tr.length; i++) {
+                tr[i].style.display = "none"; // Hide the row initially
+
+                // Loop through all table cells in each row
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = ""; // Show the row if a match is found
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <br>
+    <br>
+    <script src="js/main.js"></script>
+   
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Who we are</h4>
+                <ul>
+                    <li><a href="#">Our Business</a></li>
+                    <li><a href="#">Our History</a></li>
+                    <li><a href="#">Our Leadership</a></li>
+                    <li><a href="#">Our Partners</a></li>
+                    <li><a href="#">Our Values</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Telecom</h4>
+                <ul>
+                    <li><a href="#">Ethernet Access Drive</a></li>
+                    <li><a href="#">Fiber Devices</a></li>
+                    <li><a href="#">Gpon</a></li>
+                    <li><a href="#">Voip Gateway</a></li>
+                    <li><a href="#">xDSL Modem</a></li>
+                    <li><a href="#">Optical Transceiver SFP</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Power</h4>
+                <ul>
+                    <li><a href="#">Accessories For xlpe Insulated HV and EHV Cables</a></li>
+                    <li><a href="#">Cable Current Transformers</a></li>
+                    <li><a href="#">High Current Transformers</a></li>
+                    <li><a href="#">Voltage Dividers</a></li>
+                    <li><a href="#">Test and Measurement Equipment for Power</a></li>
+                    <li><a href="#">Xlpe Insulated Power Cables</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Railways</h4>
+                <ul>
+                    <li><a href="#">Networking</a></li>
+                    <li><a href="#">Cable Termination</a></li>
+                    <li><a href="#">Controls</a></li>
+                    <li><a href="#">Computing</a></li>
+                    <li><a href="#">Car to Car</a></li>
+                    <li><a href="#">Electronic In Motion</a></li>
+                    <li><a href="#">Weighbridge</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Newsroom</h4>
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <p><a href="tel:+911141611248">+91-11-41611248</a></p>
+                <p><a href="mailto:info@klovertel.com">info@klovertel.com</a></p>
+                <p><a href="http://www.klovertel.com">www.klovertel.com</a></p>
+                <p>Klovertel Private Limited, A-41, Block B, Mohan Cooperative Industrial Estate, Badarpur, New Delhi, Delhi 110044, India</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
