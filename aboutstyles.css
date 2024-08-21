@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    z-index: 1000; /* Ensuring the header stays on top */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.menu {
+    background-color: #f8f9fa;
+}
+
+    .menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu li {
+        margin: 0 10px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #000;
+    }
+
+.container {
+    margin-top: 120px; /* Adjust this value if needed to match header height */
+    padding: 40px;
+    max-width: 800px;
+    margin: 120px auto 0 auto; /* Adjusted for center alignment and top margin */
+}
+
+.about-section {
+    margin-bottom: 40px;
+}
+
+.text-block, .quote-block {
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+    .text-block.visible, .quote-block.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+h2 {
+    color: #ff6600;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.learn-more {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+    .learn-more:hover {
+        background-color: #e65c00;
+    }
+
+blockquote {
+    background-color: #fff;
+    border-left: 5px solid #ff6600;
+    margin: 0;
+    padding: 20px;
+    font-style: italic;
+}
+
+    blockquote p {
+        margin: 0;
+    }
+
+    blockquote footer {
+        margin-top: 10px;
+        text-align: right;
+        font-size: 16px;
+    }
+.scrolling-text {
+    display: inline-block;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
