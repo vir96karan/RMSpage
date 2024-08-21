@@ -1,0 +1,162 @@
+body {
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+    background: #ffe6cc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Video Background */
+#backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* Login page styles */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 3px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff8000;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ff6600;
+}
+
+/* Centered Image */
+.centered-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.75;
+}
+
+.centered-image img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+/* Home page styles */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    color: #ff6600;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.logo {
+    max-height: 150px;
+    width: auto;
+}
+
+.header-title {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 40px;
+    margin: 0;
+}
+
+.menu {
+    width: 100%;
+    background-color: #fff;
+}
+
+    .menu ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+        .menu ul li {
+            margin: 0 20px;
+        }
+
+            .menu ul li a {
+                color: #ff9933;
+                text-decoration: none;
+                padding: 10px 20px;
+                transition: background-color 0.3s;
+                font-size: 20px;
+            }
+
+                .menu ul li a:hover {
+                    background-color: #ffe6cc;
+                    border-radius: 5px;
+                }
+
+.container {
+    padding: 0px 20px 220px; /* Adjusted to add padding for fixed header */
+    width: 100%;
+    text-align: match-parent;
